@@ -19,7 +19,7 @@
             "which_dataset": {  // import designated dataset using arguments 
                 "name": ["data.dataset", "InpaintDataset"], // import Dataset() class / function(not recommend) from data.dataset.py (default is [data.dataset.py])
                 "args":{ // arguments to initialize dataset
-                    "data_root": "png_celebahq_64/png_local_test_64_10.flist",
+                    "data_root": "png_celebahq_64/png_train_28000_64.flist",
                     "data_len": -1,
                     "mask_config": {
                         // 'ThickStrokes', 'MediumStrokes', 'ThinStrokes', 'Every_N_Lines', 'Completion', 'Expand', 'Nearest_Neighbor'
@@ -31,17 +31,17 @@
                 } 
             },
             "dataloader":{
-                "validation_split": 3, // percent or number
+                "validation_split": 1000, // percent or number
                 "args":{ // arguments to initialize train_dataloader
-                    "batch_size": 1, // batch size in each gpu
-                    "num_workers": 0,
+                    "batch_size": 18, // batch size in each gpu
+                    "num_workers": 10,
                     "shuffle": true,
                     "pin_memory": true,
                     "drop_last": true
                 },
                 "val_args":{ // arguments to initialize valid_dataloader, will overwrite the parameters in train_dataloader
-                    "batch_size": 1, // batch size in each gpu
-                    "num_workers": 0,
+                    "batch_size": 18, // batch size in each gpu
+                    "num_workers": 10,
                     "shuffle": false,
                     "pin_memory": true,
                     "drop_last": true
@@ -149,7 +149,7 @@
         "save_checkpoint_epoch": 1,
         "log_iter": 1e3, // log every specified number of iterations
         "tensorboard" : false, // tensorboardX enable
-//        "min_val_mae_loss": 0.033417459577322006,
+//        "min_val_FID_loss": 0.033417459577322006,
         "min_val_FID_loss": 1e3,
         "min_val_flag": false,
         "train_previous":[],
