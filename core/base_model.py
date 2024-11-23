@@ -54,12 +54,12 @@ class BaseModel():
                 ''' save logged informations into log dict '''
                 train_log.update({'epoch': self.epoch, 'iters': self.iter})
 
-                if self.epoch == 1:
-                    pbar.set_description(
-                        f'train_loss: {train_log["train/mse_loss"]:.4f}')
-                else:
-                    pbar.set_description(
-                        f'train_loss: {train_log["train/mse_loss"]:.4f},eval_fid_loss: {val_log["val/FID"].item():.4f},eval_lpips_loss: {val_log["val/LPIPS"].item():.4f}')
+//                if self.epoch == 1:
+//                    pbar.set_description(
+//                        f'train_loss: {train_log["train/mse_loss"]:.4f}')
+//                else:
+//                    pbar.set_description(
+//                        f'train_loss: {train_log["train/mse_loss"]:.4f},eval_fid_loss: {val_log["val/FID"].item():.4f},eval_lpips_loss: {val_log["val/LPIPS"].item():.4f}')
 
                 ''' print logged informations to the screen and tensorboard '''
                 for key, value in train_log.items():
