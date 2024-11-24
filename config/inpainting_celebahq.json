@@ -10,7 +10,7 @@
         "tb_logger": "tb_logger", // path of tensorboard logger
         "results": "results",
         "checkpoint": "checkpoint",
-        "resume_state": "/kaggle/input/45-generalized/45_generalizied/45"
+        "resume_state": "/kaggle/input/90-generalized/90_generalized/90"
 //         "resume_state": null // ex: 100, loading .state  and .pth from given epoch and iteration
     },
 
