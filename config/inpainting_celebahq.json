@@ -10,7 +10,7 @@
         "tb_logger": "tb_logger", // path of tensorboard logger
         "results": "results",
         "checkpoint": "checkpoint",
-        "resume_state": "/kaggle/input/90-generalized/90_generalized/90"
+        "resume_state": "/kaggle/input/135-generalized/135_generalized/135"
 //         "resume_state": null // ex: 100, loading .state  and .pth from given epoch and iteration
     },
 
@@ -149,7 +149,7 @@
         "save_checkpoint_epoch": 1,
         "log_iter": 1e3, // log every specified number of iterations
         "tensorboard" : false, // tensorboardX enable
-        "min_val_FID_loss": 140.95233154296875,
+        "min_val_FID_loss": 138.6815948486328,
 //        "min_val_FID_loss": 1e3,
         "min_val_flag": false,
         "train_previous":[],
